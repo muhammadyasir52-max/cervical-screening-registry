@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cervical Screening Dashboard</title>
+  <link rel="stylesheet" href="app.css">
+</head>
+<body data-stats-url="api/public/stats">
+  <header>
+    <div class="wrap">
+      <h1>Cervical screening: public dashboard</h1>
+      <a class="staff-link" href="staff">Staff screens →</a>
+    </div>
+  </header>
+  <main class="wrap">
+    <div class="banner">
+      <strong>Demo only.</strong> Every figure here comes from a synthetic population: no real patients.
+      Figures are anonymised totals, and any count from 1 to <span id="threshold">4</span> is shown as “&lt;<span id="threshold2">5</span>”.
+    </div>
+
+    <section class="grid" id="kpis" aria-label="Headline figures"></section>
+
+    <section class="cols">
+      <div class="card">
+        <h2>Coverage by age band</h2>
+        <div id="age"></div>
+      </div>
+      <div class="card">
+        <h2>Coverage by district</h2>
+        <div id="district"></div>
+      </div>
+    </section>
+
+    <section class="cols">
+      <div class="card">
+        <h2>Results of screens in the last 12 months</h2>
+        <div id="outcomes"></div>
+      </div>
+      <div class="card">
+        <h2>District detail</h2>
+        <div class="table-scroll"><table id="district-table"></table></div>
+      </div>
+    </section>
+    <p class="muted" id="generated"></p>
+  </main>
+  <footer class="wrap">
+    Coverage = eligible women (aged 25–64) whose screening is up to date. Prototype built on HL7 FHIR R4. MIT licence.
+  </footer>
+  <script src="dashboard.js"></script>
+</body>
+</html>

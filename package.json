@@ -1,0 +1,15 @@
+{
+  "name": "cervical-screening-registry",
+  "version": "0.1.0",
+  "description": "Prototype cervical screening registry on HL7 FHIR R4, with a rules engine, alerts and an anonymised public dashboard. Synthetic demo data only.",
+  "license": "MIT",
+  "type": "module",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "start": "node src/server.js",
+    "reset-demo": "node scripts/reset-demo.js",
+    "build:pages": "node scripts/build-pages.js",
+    "test": "node --test"
+  },
+  "keywords": ["fhir", "hl7", "cervical-screening", "registry", "public-health", "prototype"]
+}
